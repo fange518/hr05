@@ -20,6 +20,7 @@ public class UserService {
         List<User> users = userDao.getAllUsers();
         return users;
     }
+
     public User getUser(){
         return new User(1,"zhangsan","123");
     }
