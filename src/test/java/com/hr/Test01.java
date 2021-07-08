@@ -16,13 +16,15 @@ import java.util.List;
 @ContextConfiguration(locations = "classpath:applicationContext.xml")
 public class Test01 {
 
-    @Autowired//查找
+    @Autowired//查找容器中和userService类型一样的bean，注入
     private UserService userService;
     @Test //无参，无返回值
     public void test01(){
-//        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-//        UserService userService = (UserService) context.getBean("userService");
-        List<User> users = userService.queryUsers();
-        users.forEach(System.out::println);
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserService userService = (UserService) context.getBean("userService");
+        UserService userService2 = (UserService) context.getBean("userService");
+        System.out.println(userService == userService2);
+ //       List<User> users = userService.queryUsers();
+  //      users.forEach(System.out::println);
     }
 }
