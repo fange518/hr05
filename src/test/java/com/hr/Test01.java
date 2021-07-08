@@ -16,7 +16,7 @@ import java.util.List;
 @ContextConfiguration(locations = "classpath:applicationContext.xml")
 public class Test01 {
 
-    @Autowired
+    @Autowired//查找
     private UserService userService;
     @Test //无参，无返回值
     public void test01(){
