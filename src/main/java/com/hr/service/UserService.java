@@ -2,11 +2,14 @@ package com.hr.service;
 
 import com.hr.dao.UserDao;
 import com.hr.entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class UserService {
-
+    //自动装配
+    @Autowired
 
     private UserDao userDao;
 

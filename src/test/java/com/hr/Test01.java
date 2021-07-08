@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Test01 {
 
-    @Test //
+    @Test //无参，无返回值
     public void test01(){
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserService userService = (UserService) context.getBean("userService");
