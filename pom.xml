@@ -18,13 +18,20 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.2.15.RELEASE</version>
+            <version>5.2.6.RELEASE</version>
         </dependency>
+
         <!--spring的测试组件-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>5.2.15.RELEASE</version>
+            <version>5.2.6.RELEASE</version>
+        </dependency>
+<!--可以使用注解实现AOP-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>5.2.6.RELEASE</version>
         </dependency>
 
         <dependency>

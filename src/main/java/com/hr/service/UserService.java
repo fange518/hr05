@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 //@Scope("signleton")//单例，默认
-//@Scope("prototype")//多例
+@Scope("prototype")//多例
 public class UserService {
     //自动装配
     @Autowired
@@ -19,6 +19,9 @@ public class UserService {
     public List<User> queryUsers(){
         List<User> users = userDao.getAllUsers();
         return users;
+    }
+    public User getUser(){
+        return new User(1,"zhangsan","123");
     }
 
     public UserDao getUserDao() {
